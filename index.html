@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Modelos Corte a Laser - UbuntuMaker</title>
+
+    <meta
+        name="description"
+        content="Coleção de modelos e geradores para corte e gravação a laser do laboratório UbuntuMaker."
+    >
+
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div class="topo-conteudo">
+
+        <a
+            class="marca"
+            href="./"
+            aria-label="UbuntuMaker - página inicial"
+        >
+            <img
+                src="assets/img/logo-ubuntumaker.png"
+                alt="UbuntuMaker"
+                class="logo-ubuntumaker"
+            >
+        </a>
+
+        <span class="topo-badge">
+            Fabricação Digital
+        </span>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- ===================================== -->
+    <!-- APRESENTAÇÃO                          -->
+    <!-- ===================================== -->
+
+    <section class="hero">
+
+        <div class="hero-conteudo">
+
+            <p class="hero-kicker">
+                UBUNTUMAKER
+            </p>
+
+            <h1>
+                Modelos Corte a Laser
+                <span>UbuntuMaker</span>
+            </h1>
+
+            <p class="hero-descricao">
+                Coleção de modelos, geradores e ferramentas desenvolvidos
+                para facilitar a criação de peças para corte e gravação a laser.
+                Escolha um modelo, personalize no navegador e exporte o arquivo
+                SVG para fabricação.
+            </p>
+
+            <div class="hero-legenda">
+
+                <span>
+                    <i class="ponto vermelho"></i>
+                    vermelho = corte
+                </span>
+
+                <span>
+                    <i class="ponto azul"></i>
+                    azul = gravação
+                </span>
+
+                <span>
+                    <i class="ponto preto"></i>
+                    preto = preenchimento
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- CATÁLOGO                              -->
+    <!-- ===================================== -->
+
+    <section class="catalogo">
+
+        <div class="catalogo-cabecalho">
+
+            <div>
+                <p class="secao-kicker">
+                    MODELOS DISPONÍVEIS
+                </p>
+
+                <h2>
+                    Escolha o que deseja criar
+                </h2>
+            </div>
+
+            <p class="catalogo-intro">
+                Cada modelo abre o seu próprio gerador. Os projetos podem
+                permanecer em repositórios independentes no GitHub;
+                esta página funciona apenas como catálogo central.
+            </p>
+
+        </div>
+
+
+        <div
+            class="filtros"
+            aria-label="Filtrar modelos"
+        >
+
+            <span class="filtros-label">
+                Mostrar
+            </span>
+
+            <button
+                class="filtro ativo"
+                type="button"
+                data-filtro="todos"
+            >
+                Todos
+            </button>
+
+            <button
+                class="filtro"
+                type="button"
+                data-filtro="chaveiro"
+            >
+                Chaveiros
+            </button>
+
+            <button
+                class="filtro"
+                type="button"
+                data-filtro="card"
+            >
+                Cards
+            </button>
+
+            <button
+                class="filtro"
+                type="button"
+                data-filtro="utilidade"
+            >
+                Utilidades
+            </button>
+
+        </div>
+
+
+        <div
+            id="gradeModelos"
+            class="grade-modelos"
+        >
+
+            <!-- ================================= -->
+            <!-- CHAVEIRO COM NOME                 -->
+            <!-- ================================= -->
+
+            <article
+                class="modelo-card"
+                data-categorias="chaveiro"
+            >
+
+                <div class="modelo-imagem">
+
+                    <img
+                        src="assets/img/chaveiro-nome.svg"
+                        alt="Exemplo de chaveiro personalizado com nome"
+                    >
+
+                    <span class="badge-card">
+                        GERADOR
+                    </span>
+
+                </div>
+
+
+                <div class="modelo-conteudo">
+
+                    <div class="modelo-meta">
+                        <span>Chaveiro</span>
+                        <span>Texto</span>
+                    </div>
+
+                    <h3>
+                        Chaveiro com Nome
+                    </h3>
+
+                    <p>
+                        Crie chaveiros personalizados com diferentes fontes,
+                        contorno, argola e opção de dupla camada.
+                    </p>
+
+                    <!--
+                        SUBSTITUA # PELA URL DO GITHUB PAGES
+                        DO GERADOR DE CHAVEIRO COM NOME.
+                    -->
+                    <a
+                        class="botao-modelo"
+                        href="https://marangoni.github.io/keychain-generator/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Abrir gerador
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================= -->
+            <!-- EMOJI                             -->
+            <!-- ================================= -->
+
+            <article
+                class="modelo-card"
+                data-categorias="chaveiro card"
+            >
+
+                <div class="modelo-imagem">
+
+                    <img
+                        src="assets/img/chaveiro-emoji.svg"
+                        alt="Exemplos de chaveiros e cards com emoji"
+                    >
+
+                    <span class="badge-card">
+                        GERADOR
+                    </span>
+
+                </div>
+
+
+                <div class="modelo-conteudo">
+
+                    <div class="modelo-meta">
+                        <span>Chaveiro</span>
+                        <span>Card</span>
+                        <span>Emoji</span>
+                    </div>
+
+                    <h3>
+                        Chaveiro e Card com Emoji
+                    </h3>
+
+                    <p>
+                        Escolha um emoji, ajuste a geometria e gere
+                        automaticamente os elementos para corte e gravação.
+                    </p>
+
+                    <!--
+                        SUBSTITUA # PELA URL DO GITHUB PAGES
+                        DO GERADOR DE EMOJIS.
+                    -->
+                    <a
+                        class="botao-modelo"
+                        href="https://marangoni.github.io/keychain-emoji-generator/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Abrir gerador
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================= -->
+            <!-- FUTEBOL                           -->
+            <!-- ================================= -->
+
+            <article
+                class="modelo-card"
+                data-categorias="chaveiro card"
+            >
+
+                <div class="modelo-imagem">
+
+                    <img
+                        src="assets/img/chaveiro-futebol.svg"
+                        alt="Exemplos de chaveiros e cards com escudos de futebol"
+                    >
+
+                    <span class="badge-card">
+                        GERADOR
+                    </span>
+
+                </div>
+
+
+                <div class="modelo-conteudo">
+
+                    <div class="modelo-meta">
+                        <span>Chaveiro</span>
+                        <span>Card</span>
+                        <span>Futebol</span>
+                    </div>
+
+                    <h3>
+                        Chaveiro e Card de Futebol
+                    </h3>
+
+                    <p>
+                        Importe um escudo vetorial, gere o contorno
+                        de corte e prepare os detalhes internos para gravação.
+                    </p>
+
+                    <a
+                        class="botao-modelo"
+                        href="https://marangoni.github.io/chaveiros-futebol/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Abrir gerador
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ================================= -->
+            <!-- PERSONAGENS DIVERSOS              -->
+            <!-- ================================= -->
+
+            <article
+                class="modelo-card"
+                data-categorias="chaveiro card"
+            >
+
+                <div class="modelo-imagem">
+
+                    <img
+                        src="assets/img/chaveiro-personagens.svg"
+                        alt="Exemplos de chaveiros e cards com personagens diversos"
+                    >
+
+                    <span class="badge-card">
+                        GERADOR
+                    </span>
+
+                </div>
+
+
+                <div class="modelo-conteudo">
+
+                    <div class="modelo-meta">
+                        <span>Chaveiro</span>
+                        <span>Card</span>
+                        <span>Personagens</span>
+                    </div>
+
+                    <h3>
+                        Chaveiros e Cards — Personagens
+                    </h3>
+
+                    <p>
+                        Gerador para criação de chaveiros e cards com
+                        personagens e ilustrações diversas.
+                    </p>
+
+                    <!--
+                        Substitua # pela URL do GitHub Pages
+                        quando este gerador for publicado.
+                    -->
+                    <a
+                        class="botao-modelo"
+                        href="#"
+                        data-link-pendente="true"
+                    >
+                        Em desenvolvimento
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================= -->
+            <!-- CAIXA PARAMÉTRICA                  -->
+            <!-- ================================= -->
+
+            <article
+                class="modelo-card"
+                data-categorias="utilidade"
+            >
+
+                <div class="modelo-imagem">
+
+                    <img
+                        src="assets/img/caixa-parametrica.svg"
+                        alt="Exemplo de caixa de madeira cortada a laser"
+                    >
+
+                    <span class="badge-card badge-card-secundario">
+                        EM BREVE
+                    </span>
+
+                </div>
+
+
+                <div class="modelo-conteudo">
+
+                    <div class="modelo-meta">
+                        <span>Caixa</span>
+                        <span>Utilidade</span>
+                    </div>
+
+                    <h3>
+                        Caixa Paramétrica
+                    </h3>
+
+                    <p>
+                        Gere caixas paramétricas com encaixes tipo finger joint,
+                        configurando dimensões e outros parâmetros diretamente no navegador.
+                    </p>
+
+                    <a
+                        class="botao-modelo"
+                        href="https://boxes.hackerspace-bamberg.de/?language=pt_BR"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Abrir gerador
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div
+            id="semResultados"
+            class="sem-resultados"
+            hidden
+        >
+            Nenhum modelo encontrado nesta categoria.
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- FLUXO                                 -->
+    <!-- ===================================== -->
+
+    <section class="como-funciona">
+
+        <div class="como-funciona-conteudo">
+
+            <div class="como-funciona-cabecalho">
+
+                <p class="secao-kicker">
+                    COMO UTILIZAR
+                </p>
+
+                <h2>
+                    Do modelo à fabricação
+                </h2>
+
+            </div>
+
+
+            <div class="passos">
+
+                <article class="passo">
+
+                    <span class="passo-numero">
+                        01
+                    </span>
+
+                    <h3>
+                        Escolha
+                    </h3>
+
+                    <p>
+                        Selecione um modelo ou gerador no catálogo.
+                    </p>
+
+                </article>
+
+
+                <article class="passo">
+
+                    <span class="passo-numero">
+                        02
+                    </span>
+
+                    <h3>
+                        Personalize
+                    </h3>
+
+                    <p>
+                        Ajuste dimensões, texto, desenho e demais parâmetros.
+                    </p>
+
+                </article>
+
+
+                <article class="passo">
+
+                    <span class="passo-numero">
+                        03
+                    </span>
+
+                    <h3>
+                        Exporte
+                    </h3>
+
+                    <p>
+                        Gere o SVG e leve o arquivo para o software da máquina.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="rodape">
+
+    <div class="rodape-conteudo">
+
+        <div class="rodape-marca">
+
+            <img
+                src="assets/img/logo-ubuntumaker.png"
+                alt="UbuntuMaker"
+            >
+
+        </div>
+
+        <div class="rodape-texto">
+
+            <span>
+                Modelos para fabricação digital
+            </span>
+
+            <span>
+                Corte a laser • SVG • UbuntuMaker
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js?v=4"></script>
+
+</body>
+</html>

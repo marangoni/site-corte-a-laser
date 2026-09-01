@@ -1,0 +1,1181 @@
+/* =========================================
+   IDENTIDADE UBUNTUMAKER
+   =========================================
+
+   Paleta derivada do logotipo fornecido:
+
+   Amarelo  : #FCC52D
+   Laranja  : #E17D01
+   Verde    : #8A880D
+   Vinho    : #531C33
+
+   ========================================= */
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    background: #f7f6f3;
+
+    color: #2b2427;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================
+   VARIÁVEIS
+   ========================================= */
+
+:root {
+
+    --ubuntu-amarelo:
+        #fcc52d;
+
+    --ubuntu-laranja:
+        #e17d01;
+
+    --ubuntu-verde:
+        #8a880d;
+
+    --ubuntu-vinho:
+        #531c33;
+
+    --ubuntu-vinho-claro:
+        #75445a;
+
+    --pagina:
+        #f7f6f3;
+
+    --superficie:
+        #ffffff;
+
+    --texto:
+        #2b2427;
+
+    --texto-secundario:
+        #70686b;
+
+    --borda:
+        #e1ddd8;
+
+    --borda-forte:
+        #cec6c0;
+
+    --sombra:
+        0 10px 28px rgba(83, 28, 51, 0.10);
+
+    --raio:
+        14px;
+
+    --largura:
+        1320px;
+}
+
+
+/* =========================================
+   TOPO
+   ========================================= */
+
+.topo {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    border-bottom:
+        1px solid var(--borda);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.topo-conteudo {
+    width:
+        min(
+            calc(100% - 40px),
+            var(--largura)
+        );
+
+    min-height:
+        76px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.marca {
+    display: block;
+}
+
+
+.logo-ubuntumaker {
+    width: 150px;
+
+    height: auto;
+}
+
+
+.topo-badge {
+    padding:
+        7px
+        11px;
+
+    background:
+        #f7f1f4;
+
+    border:
+        1px solid #eadde3;
+
+    border-radius:
+        999px;
+
+    color:
+        var(--ubuntu-vinho);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.06em;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    position: relative;
+
+    overflow: hidden;
+
+    border-bottom:
+        1px solid #e9dfd4;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fffaf0 52%,
+            #fbf1dc 100%
+        );
+}
+
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -120px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(252, 197, 45, 0.28),
+            rgba(225, 125, 1, 0.08) 58%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+.hero-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            calc(100% - 40px),
+            var(--largura)
+        );
+
+    margin: 0 auto;
+
+    padding:
+        66px
+        0
+        58px;
+}
+
+
+.hero-kicker,
+.secao-kicker {
+    margin:
+        0
+        0
+        10px;
+
+    color:
+        var(--ubuntu-verde);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.12em;
+}
+
+
+.hero h1 {
+    max-width:
+        900px;
+
+    margin: 0;
+
+    color:
+        var(--ubuntu-vinho);
+
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            78px
+        );
+
+    line-height:
+        0.98;
+
+    letter-spacing:
+        -0.05em;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    margin-top:
+        8px;
+
+    color:
+        var(--ubuntu-laranja);
+
+    font-size:
+        0.62em;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+.hero-descricao {
+    max-width:
+        780px;
+
+    margin:
+        25px
+        0
+        0;
+
+    color:
+        var(--texto-secundario);
+
+    font-size:
+        18px;
+
+    line-height:
+        1.55;
+}
+
+
+.hero-legenda {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap:
+        18px;
+
+    margin-top:
+        28px;
+
+    color:
+        #5c5356;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+}
+
+
+.hero-legenda span {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+}
+
+
+.ponto {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+}
+
+
+.ponto.vermelho {
+    background:
+        #f00000;
+}
+
+
+.ponto.azul {
+    background:
+        #164ee8;
+}
+
+
+.ponto.preto {
+    background:
+        #111111;
+}
+
+
+/* =========================================
+   CATÁLOGO
+   ========================================= */
+
+.catalogo {
+    width:
+        min(
+            calc(100% - 40px),
+            var(--largura)
+        );
+
+    margin: 0 auto;
+
+    padding:
+        52px
+        0
+        70px;
+}
+
+
+.catalogo-cabecalho {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(280px, 520px);
+
+    gap: 40px;
+
+    align-items: end;
+
+    margin-bottom: 24px;
+}
+
+
+.catalogo-cabecalho h2,
+.como-funciona h2 {
+    margin: 0;
+
+    color:
+        var(--ubuntu-vinho);
+
+    font-size:
+        clamp(
+            28px,
+            4vw,
+            42px
+        );
+
+    line-height:
+        1.05;
+
+    letter-spacing:
+        -0.04em;
+}
+
+
+.catalogo-intro {
+    margin: 0;
+
+    color:
+        var(--texto-secundario);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================
+   FILTROS
+   ========================================= */
+
+.filtros {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 24px;
+}
+
+
+.filtros-label {
+    margin-right: 8px;
+
+    color: #887d81;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+}
+
+
+.filtro {
+    min-height: 31px;
+
+    padding:
+        5px
+        12px;
+
+    border:
+        1px solid transparent;
+
+    border-radius:
+        999px;
+
+    background:
+        #eeeae7;
+
+    color:
+        #62585c;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    cursor: pointer;
+
+    transition:
+        0.15s ease;
+}
+
+
+.filtro:hover {
+    background:
+        #e5dfda;
+}
+
+
+.filtro.ativo {
+    background:
+        var(--ubuntu-vinho);
+
+    border-color:
+        var(--ubuntu-vinho);
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================
+   GRID DE MODELOS
+   ========================================= */
+
+.grade-modelos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 22px;
+}
+
+
+.modelo-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background:
+        var(--superficie);
+
+    border:
+        1px solid var(--borda);
+
+    border-radius:
+        var(--raio);
+
+    box-shadow:
+        0 2px 8px
+        rgba(83, 28, 51, 0.035);
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+}
+
+
+.modelo-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #d5c7cc;
+
+    box-shadow:
+        var(--sombra);
+}
+
+
+.modelo-card.oculto {
+    display: none;
+}
+
+
+/* =========================================
+   IMAGEM
+   ========================================= */
+
+.modelo-imagem {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio:
+        16 / 10;
+
+    background:
+        #f0ece8;
+
+    border-bottom:
+        4px solid
+        var(--ubuntu-amarelo);
+}
+
+
+.modelo-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.modelo-card:hover
+.modelo-imagem img {
+    transform:
+        scale(1.025);
+}
+
+
+.badge-card {
+    position: absolute;
+
+    right: 10px;
+    bottom: 10px;
+
+    padding:
+        5px
+        8px;
+
+    background:
+        rgba(83, 28, 51, 0.94);
+
+    border-radius:
+        5px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+.badge-card-secundario {
+    background:
+        rgba(138, 136, 13, 0.94);
+}
+
+
+/* =========================================
+   CONTEÚDO DOS CARDS
+   ========================================= */
+
+.modelo-conteudo {
+    padding:
+        17px
+        17px
+        18px;
+}
+
+
+.modelo-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-bottom: 9px;
+}
+
+
+.modelo-meta span {
+    padding:
+        4px
+        7px;
+
+    background:
+        #f5f3df;
+
+    border:
+        1px solid #ece7b4;
+
+    border-radius:
+        999px;
+
+    color:
+        var(--ubuntu-verde);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.modelo-card h3 {
+    margin: 0;
+
+    color:
+        var(--ubuntu-vinho);
+
+    font-size:
+        18px;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+.modelo-card p {
+    min-height: 61px;
+
+    margin:
+        8px
+        0
+        16px;
+
+    color:
+        var(--texto-secundario);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.55;
+}
+
+
+.botao-modelo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 39px;
+
+    padding:
+        8px
+        11px;
+
+    background:
+        var(--ubuntu-vinho);
+
+    border-radius:
+        7px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    transition:
+        background 0.15s ease,
+        transform 0.08s ease;
+}
+
+
+.botao-modelo:hover {
+    background:
+        var(--ubuntu-laranja);
+}
+
+
+.botao-modelo:active {
+    transform:
+        translateY(1px);
+}
+
+
+.botao-modelo-desabilitado {
+    background:
+        #c8c1bd;
+
+    color:
+        #ffffff;
+
+    cursor: default;
+}
+
+
+.botao-modelo-desabilitado:hover {
+    background:
+        #c8c1bd;
+}
+
+
+/* =========================================
+   LINKS AINDA NÃO CONFIGURADOS
+   ========================================= */
+
+.botao-modelo[data-link-pendente="true"] {
+    background:
+        #8d8588;
+}
+
+
+.botao-modelo[data-link-pendente="true"]:hover {
+    background:
+        #8d8588;
+}
+
+
+/* =========================================
+   SEM RESULTADOS
+   ========================================= */
+
+.sem-resultados {
+    margin-top: 20px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border:
+        1px dashed
+        var(--borda-forte);
+
+    border-radius: 10px;
+
+    color: #70686b;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   COMO FUNCIONA
+   ========================================= */
+
+.como-funciona {
+    background:
+        var(--ubuntu-vinho);
+
+    color: #ffffff;
+}
+
+
+.como-funciona-conteudo {
+    width:
+        min(
+            calc(100% - 40px),
+            var(--largura)
+        );
+
+    margin: 0 auto;
+
+    padding:
+        58px
+        0
+        70px;
+}
+
+
+.como-funciona
+.secao-kicker {
+    color:
+        var(--ubuntu-amarelo);
+}
+
+
+.como-funciona h2 {
+    color: #ffffff;
+}
+
+
+.como-funciona-cabecalho {
+    margin-bottom: 28px;
+}
+
+
+.passos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 14px;
+}
+
+
+.passo {
+    min-height: 170px;
+
+    padding: 22px;
+
+    background:
+        #62263f;
+
+    border:
+        1px solid #7b3a54;
+
+    border-radius:
+        12px;
+}
+
+
+.passo-numero {
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+    color:
+        var(--ubuntu-amarelo);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+}
+
+
+.passo h3 {
+    margin: 0;
+
+    font-size: 19px;
+}
+
+
+.passo p {
+    margin:
+        8px
+        0
+        0;
+
+    color:
+        #e1cfd6;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.5;
+}
+
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.rodape {
+    background:
+        #ffffff;
+
+    border-top:
+        4px solid
+        var(--ubuntu-amarelo);
+}
+
+
+.rodape-conteudo {
+    width:
+        min(
+            calc(100% - 40px),
+            var(--largura)
+        );
+
+    min-height:
+        92px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+.rodape-marca img {
+    width: 135px;
+
+    height: auto;
+}
+
+
+.rodape-texto {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 4px;
+
+    color:
+        #776d71;
+
+    font-size:
+        10px;
+}
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (
+    max-width: 1000px
+) {
+
+    .grade-modelos {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (
+    max-width: 760px
+) {
+
+    .catalogo-cabecalho {
+        grid-template-columns:
+            1fr;
+
+        gap: 16px;
+    }
+
+
+    .hero-conteudo {
+        padding:
+            50px
+            0
+            44px;
+    }
+
+
+    .hero-descricao {
+        font-size: 16px;
+    }
+
+
+    .passos {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .passo {
+        min-height: 0;
+    }
+
+
+    .passo-numero {
+        margin-bottom: 18px;
+    }
+
+}
+
+
+@media (
+    max-width: 580px
+) {
+
+    .topo-conteudo,
+    .hero-conteudo,
+    .catalogo,
+    .como-funciona-conteudo,
+    .rodape-conteudo {
+        width:
+            min(
+                calc(100% - 24px),
+                var(--largura)
+            );
+    }
+
+
+    .topo-conteudo {
+        min-height: 68px;
+    }
+
+
+    .logo-ubuntumaker {
+        width: 130px;
+    }
+
+
+    .topo-badge {
+        display: none;
+    }
+
+
+    .grade-modelos {
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+    }
+
+
+    .modelo-card p {
+        min-height: 0;
+    }
+
+
+    .filtros-label {
+        width: 100%;
+
+        margin-bottom: 4px;
+    }
+
+
+    .rodape-conteudo {
+        min-height: 115px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .rodape-texto {
+        align-items: flex-start;
+    }
+
+}

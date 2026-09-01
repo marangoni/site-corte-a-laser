@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+<defs>
+  <linearGradient id="bg4" x1="0" x2="1" y1="0" y2="1">
+    <stop stop-color="#e8e8e5"/>
+    <stop offset="1" stop-color="#c9c9c3"/>
+  </linearGradient>
+  <linearGradient id="wood4" x1="0" x2="1">
+    <stop stop-color="#b77b3f"/>
+    <stop offset=".5" stop-color="#e7bd7e"/>
+    <stop offset="1" stop-color="#98602d"/>
+  </linearGradient>
+  <filter id="s4" x="-30%" y="-30%" width="170%" height="180%">
+    <feDropShadow dx="0" dy="20" stdDeviation="18" flood-opacity=".24"/>
+  </filter>
+</defs>
+<rect width="900" height="560" fill="url(#bg4)"/>
+<g transform="translate(175 115)" filter="url(#s4)">
+  <path d="M65 170 L340 80 L570 160 L295 260Z" fill="#efcf9b" stroke="#6f4828" stroke-width="7"/>
+  <path d="M65 170 L295 260 L295 420 L65 324Z" fill="url(#wood4)" stroke="#6f4828" stroke-width="7"/>
+  <path d="M295 260 L570 160 L570 318 L295 420Z" fill="#c58e50" stroke="#6f4828" stroke-width="7"/>
+  <path d="M65 170 L340 80 L570 160 L295 260Z" fill="none" stroke="#6f4828" stroke-width="7"
+        stroke-dasharray="28 11"/>
+</g>
+<text x="55" y="515" font-family="Arial" font-size="24" fill="#51514d">
+  Caixa paramétrica — modelo futuro
+</text>
+</svg>
