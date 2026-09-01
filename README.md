@@ -28,14 +28,17 @@ Não é necessário copiar os geradores para este projeto.
 
 ## Links
 
-Os geradores atualmente configurados são:
+Os recursos atualmente configurados no catálogo são:
 
 - Chaveiro com nome: `https://marangoni.github.io/keychain-generator/`
 - Chaveiro e card com emoji: `https://marangoni.github.io/keychain-emoji-generator/`
 - Chaveiro e card de futebol: `https://marangoni.github.io/chaveiros-futebol/`
+- Chaveiro e card de personagens: `https://marangoni.github.io/keychain-personagens/`
 - Caixa paramétrica: `https://boxes.hackerspace-bamberg.de/?language=pt_BR`
+- Modelos Cuttle — Free: `https://cuttle.xyz/templates/free`
+- Modelos Cuttle — Contribuições da Comunidade: `https://cuttle.xyz/templates/projects-from-the-community`
 
-Também foi incluído um card reservado para o futuro gerador de **chaveiros e cards com personagens diversos**. Quando esse projeto for publicado, basta substituir o `href="#"` desse card pela nova URL do GitHub Pages e remover `data-link-pendente="true"`.
+Os geradores permanecem em seus próprios repositórios ou sites. Este projeto funciona apenas como catálogo central.
 
 ## Teste local
 

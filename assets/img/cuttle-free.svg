@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <stop stop-color="#fff6dc"/>
+    <stop offset="1" stop-color="#ead6bc"/>
+  </linearGradient>
+  <linearGradient id="wood" x1="0" x2="1">
+    <stop stop-color="#c98b4c"/>
+    <stop offset=".5" stop-color="#efc98e"/>
+    <stop offset="1" stop-color="#ad6f35"/>
+  </linearGradient>
+  <filter id="s" x="-30%" y="-30%" width="170%" height="180%">
+    <feDropShadow dx="0" dy="16" stdDeviation="14" flood-opacity=".22"/>
+  </filter>
+</defs>
+
+<rect width="900" height="560" fill="url(#bg)"/>
+
+<g transform="translate(90 120)" filter="url(#s)">
+  <rect x="0" y="0" width="240" height="230" rx="24" fill="url(#wood)" stroke="#531c33" stroke-width="7"/>
+  <path d="M40 55 H200 M40 95 H160 M40 135 H185 M40 175 H130"
+        stroke="#531c33" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="198" cy="176" r="24" fill="none" stroke="#e17d01" stroke-width="9"/>
+</g>
+
+<g transform="translate(370 100) rotate(5 120 130)" filter="url(#s)">
+  <path d="M120 10 L218 65 L210 180 L120 250 L30 180 L22 65Z"
+        fill="url(#wood)" stroke="#531c33" stroke-width="7"/>
+  <circle cx="120" cy="112" r="50" fill="none" stroke="#8a880d" stroke-width="10"/>
+  <path d="M85 170 Q120 205 156 170" fill="none" stroke="#8a880d" stroke-width="9" stroke-linecap="round"/>
+</g>
+
+<g transform="translate(660 125) rotate(-6 75 110)" filter="url(#s)">
+  <path d="M20 20 H130 V45 H155 V190 H130 V220 H20 V190 H-5 V45 H20Z"
+        fill="url(#wood)" stroke="#531c33" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M45 70 H105 M45 105 H105 M45 140 H90"
+        stroke="#e17d01" stroke-width="10" stroke-linecap="round"/>
+</g>
+
+<text x="55" y="510" font-family="Arial" font-size="25" font-weight="700" fill="#531c33">
+  Modelos gratuitos para explorar e adaptar
+</text>
+</svg>
