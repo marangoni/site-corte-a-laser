@@ -35,6 +35,7 @@ Os recursos atualmente configurados no catálogo são:
 - Chaveiro e card de futebol: `https://marangoni.github.io/chaveiros-futebol/`
 - Chaveiro e card de personagens: `https://marangoni.github.io/keychain-personagens/`
 - Caixa paramétrica: `https://boxes.hackerspace-bamberg.de/?language=pt_BR`
+- Agregador de SVGs: `https://marangoni.github.io/agregador-svgs/`
 - Modelos Cuttle — Free: `https://cuttle.xyz/templates/free`
 - Modelos Cuttle — Contribuições da Comunidade: `https://cuttle.xyz/templates/projects-from-the-community`
 
