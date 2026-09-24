@@ -1,6 +1,70 @@
 // =====================================================
-// Catálogo UbuntuMaker
+// CATÁLOGO UBUNTUMAKER
 // =====================================================
+
+
+// =====================================================
+// FUNÇÕES AUXILIARES
+// =====================================================
+
+function obterGrade() {
+
+    return document.getElementById(
+        "gradeModelos"
+    );
+
+}
+
+
+function inserirAntesDosModelos(
+    card
+) {
+
+    const grade =
+        obterGrade();
+
+
+    if (!grade) {
+        return;
+    }
+
+
+    const primeiroModeloExterno =
+        grade.querySelector(
+            '.modelo-card[data-categorias~="modelos"]'
+        );
+
+
+    if (primeiroModeloExterno) {
+
+        grade.insertBefore(
+            card,
+            primeiroModeloExterno
+        );
+
+    }
+    else {
+
+        grade.appendChild(
+            card
+        );
+
+    }
+
+}
+
+
+function svgParaDataUri(
+    svg
+) {
+
+    return (
+        "data:image/svg+xml;charset=UTF-8," +
+        encodeURIComponent(svg)
+    );
+
+}
+
 
 
 // =====================================================
@@ -10,18 +74,13 @@
 function adicionarCalibradorVs6040() {
 
     const grade =
-        document.getElementById(
-            "gradeModelos"
-        );
+        obterGrade();
 
 
     if (!grade) {
         return;
     }
 
-
-    // Evita duplicação caso o card venha a ser
-    // incorporado diretamente ao HTML no futuro.
 
     if (
         document.getElementById(
@@ -78,12 +137,9 @@ function adicionarCalibradorVs6040() {
         filtros.appendChild(
             botao
         );
+
     }
 
-
-    // -------------------------------------------------
-    // CARD
-    // -------------------------------------------------
 
     const card =
         document.createElement(
@@ -109,7 +165,7 @@ function adicionarCalibradorVs6040() {
 
             <img
                 src="assets/img/calibrador-vs6040.svg"
-                alt="Matriz de calibração de potência e velocidade da cortadora laser VISUTEC VS6040"
+                alt="Matriz de calibração da cortadora laser VISUTEC VS6040"
             >
 
             <span class="badge-card">
@@ -123,17 +179,9 @@ function adicionarCalibradorVs6040() {
 
             <div class="modelo-meta">
 
-                <span>
-                    VS6040
-                </span>
-
-                <span>
-                    Corte
-                </span>
-
-                <span>
-                    Gravação
-                </span>
+                <span>VS6040</span>
+                <span>Corte</span>
+                <span>Gravação</span>
 
             </div>
 
@@ -144,10 +192,12 @@ function adicionarCalibradorVs6040() {
 
 
             <p>
+
                 Gere matrizes de potência × velocidade para
                 corte, gravação vetorial e preenchimento.
-                O aplicativo cria arquivos SVG de referência
-                e pacotes NGC para execução no K40 Whisperer.
+                Crie arquivos SVG e pacotes NGC para utilização
+                no K40 Whisperer.
+
             </p>
 
 
@@ -157,11 +207,13 @@ function adicionarCalibradorVs6040() {
                 target="_blank"
                 rel="noopener noreferrer"
             >
+
                 Abrir calibrador
 
                 <span aria-hidden="true">
                     →
                 </span>
+
             </a>
 
         </div>
@@ -169,32 +221,9 @@ function adicionarCalibradorVs6040() {
     `;
 
 
-    // Coloca o calibrador junto das ferramentas,
-    // antes da seção de modelos externos do Cuttle.
-
-    const primeiroModeloExterno =
-        grade.querySelector(
-            '.modelo-card[data-categorias~="modelos"]'
-        );
-
-
-    if (
-        primeiroModeloExterno
-    ) {
-
-        grade.insertBefore(
-            card,
-            primeiroModeloExterno
-        );
-
-    }
-    else {
-
-        grade.appendChild(
-            card
-        );
-
-    }
+    inserirAntesDosModelos(
+        card
+    );
 
 }
 
@@ -207,20 +236,13 @@ function adicionarCalibradorVs6040() {
 function adicionarConfiguradorDestinoSvg() {
 
     const grade =
-        document.getElementById(
-            "gradeModelos"
-        );
+        obterGrade();
 
 
     if (!grade) {
         return;
     }
 
-
-    /*
-     * Evita duplicação se o card for
-     * incorporado diretamente ao HTML futuramente.
-     */
 
     if (
         document.getElementById(
@@ -249,14 +271,8 @@ function adicionarConfiguradorDestinoSvg() {
         "ferramenta utilidade";
 
 
-    /*
-     * Ilustração SVG embutida.
-     *
-     * Assim não é necessário criar outro
-     * arquivo na pasta assets/img.
-     */
-
     const imagemSvg = `
+
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 960 600"
@@ -422,12 +438,12 @@ function adicionarConfiguradorDestinoSvg() {
             </text>
 
         </svg>
+
     `;
 
 
     const imagemDataUri =
-        "data:image/svg+xml;charset=UTF-8," +
-        encodeURIComponent(
+        svgParaDataUri(
             imagemSvg
         );
 
@@ -452,17 +468,9 @@ function adicionarConfiguradorDestinoSvg() {
 
             <div class="modelo-meta">
 
-                <span>
-                    SVG
-                </span>
-
-                <span>
-                    Google Drive
-                </span>
-
-                <span>
-                    Equipe
-                </span>
+                <span>SVG</span>
+                <span>Google Drive</span>
+                <span>Equipe</span>
 
             </div>
 
@@ -473,9 +481,12 @@ function adicionarConfiguradorDestinoSvg() {
 
 
             <p>
+
                 Defina a pasta do Google Drive onde serão
-                armazenados os arquivos SVG enviados pelo
-                formulário. Acesso restrito à equipe autorizada.
+                armazenados os próximos SVGs enviados.
+                Acesso restrito aos membros autorizados
+                da equipe.
+
             </p>
 
 
@@ -485,11 +496,13 @@ function adicionarConfiguradorDestinoSvg() {
                 target="_blank"
                 rel="noopener noreferrer"
             >
+
                 Abrir configurador
 
                 <span aria-hidden="true">
                     →
                 </span>
+
             </a>
 
         </div>
@@ -497,34 +510,249 @@ function adicionarConfiguradorDestinoSvg() {
     `;
 
 
-    /*
-     * Coloca o configurador junto das ferramentas,
-     * antes dos recursos externos do Cuttle.
-     */
+    inserirAntesDosModelos(
+        card
+    );
 
-    const primeiroModeloExterno =
-        grade.querySelector(
-            '.modelo-card[data-categorias~="modelos"]'
-        );
+}
+
+
+
+// =====================================================
+// ENVIO DE SVGs
+// =====================================================
+
+function adicionarEnvioSvg() {
+
+    const grade =
+        obterGrade();
+
+
+    if (!grade) {
+        return;
+    }
 
 
     if (
-        primeiroModeloExterno
+        document.getElementById(
+            "card-envio-svg"
+        )
     ) {
+        return;
+    }
 
-        grade.insertBefore(
-            card,
-            primeiroModeloExterno
+
+    const card =
+        document.createElement(
+            "article"
         );
 
-    }
-    else {
 
-        grade.appendChild(
-            card
+    card.id =
+        "card-envio-svg";
+
+
+    card.className =
+        "modelo-card";
+
+
+    card.dataset.categorias =
+        "ferramenta utilidade";
+
+
+    const imagemSvg = `
+
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 960 600"
+        >
+
+            <rect
+                width="960"
+                height="600"
+                fill="#f0ece8"
+            />
+
+
+            <!-- Nuvem -->
+
+            <path
+                d="
+                    M275 395
+                    H690
+                    C755 395 790 355 790 310
+                    C790 263 753 226 705 226
+                    C686 226 669 232 654 242
+                    C626 180 571 145 507 145
+                    C420 145 350 207 340 289
+                    C322 278 300 272 278 272
+                    C220 272 174 317 174 371
+                    C174 385 177 398 182 410
+                "
+                fill="#ffffff"
+                stroke="#531C33"
+                stroke-width="11"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+
+
+            <!-- Arquivos -->
+
+            <rect
+                x="355"
+                y="302"
+                width="135"
+                height="110"
+                rx="14"
+                fill="#ffffff"
+                stroke="#531C33"
+                stroke-width="7"
+            />
+
+
+            <rect
+                x="405"
+                y="275"
+                width="155"
+                height="130"
+                rx="15"
+                fill="#FCC52D"
+                stroke="#531C33"
+                stroke-width="8"
+            />
+
+
+            <text
+                x="482"
+                y="355"
+                text-anchor="middle"
+                font-family="Arial, Helvetica, sans-serif"
+                font-size="36"
+                font-weight="800"
+                fill="#531C33"
+            >
+                SVG
+            </text>
+
+
+            <!-- Seta -->
+
+            <path
+                d="
+                    M482 270
+                    V180
+                "
+                fill="none"
+                stroke="#E17D01"
+                stroke-width="18"
+                stroke-linecap="round"
+            />
+
+
+            <path
+                d="
+                    M436 223
+                    L482 177
+                    L528 223
+                "
+                fill="none"
+                stroke="#E17D01"
+                stroke-width="18"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+
+
+            <text
+                x="480"
+                y="520"
+                text-anchor="middle"
+                font-family="Arial, Helvetica, sans-serif"
+                font-size="34"
+                font-weight="800"
+                letter-spacing="2"
+                fill="#531C33"
+            >
+                ENVIAR SVGs
+            </text>
+
+        </svg>
+
+    `;
+
+
+    const imagemDataUri =
+        svgParaDataUri(
+            imagemSvg
         );
 
-    }
+
+    card.innerHTML = `
+
+        <div class="modelo-imagem">
+
+            <img
+                src="${imagemDataUri}"
+                alt="Envio de um ou vários arquivos SVG para corte a laser"
+            >
+
+            <span class="badge-card">
+                ENVIO
+            </span>
+
+        </div>
+
+
+        <div class="modelo-conteudo">
+
+            <div class="modelo-meta">
+
+                <span>SVG</span>
+                <span>Upload múltiplo</span>
+                <span>Corte a laser</span>
+
+            </div>
+
+
+            <h3>
+                Enviar SVGs para Corte
+            </h3>
+
+
+            <p>
+
+                Envie um ou vários arquivos SVG em uma única
+                submissão. Os arquivos são armazenados
+                automaticamente na pasta definida pela equipe.
+                Não é necessário login no Google.
+
+            </p>
+
+
+            <a
+                class="botao-modelo"
+                href="https://app.youform.com/forms/28mehdka"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Enviar arquivos
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    `;
+
+
+    inserirAntesDosModelos(
+        card
+    );
 
 }
 
@@ -537,6 +765,8 @@ function adicionarConfiguradorDestinoSvg() {
 adicionarCalibradorVs6040();
 
 adicionarConfiguradorDestinoSvg();
+
+adicionarEnvioSvg();
 
 
 
@@ -601,8 +831,11 @@ function filtrarModelos(
 
 
         if (mostrar) {
+
             encontrados++;
+
         }
+
     }
 
 
@@ -612,6 +845,10 @@ function filtrarModelos(
 }
 
 
+
+// =====================================================
+// EVENTOS DOS FILTROS
+// =====================================================
 
 for (
     const botao
@@ -653,9 +890,6 @@ for (
 // =====================================================
 // LINKS PENDENTES
 // =====================================================
-
-// Impede navegação acidental enquanto
-// a URL de um gerador ainda não foi configurada.
 
 const linksPendentes =
     document.querySelectorAll(
