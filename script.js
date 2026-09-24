@@ -199,7 +199,345 @@ function adicionarCalibradorVs6040() {
 }
 
 
+
+// =====================================================
+// CONFIGURADOR DE DESTINO SVG
+// =====================================================
+
+function adicionarConfiguradorDestinoSvg() {
+
+    const grade =
+        document.getElementById(
+            "gradeModelos"
+        );
+
+
+    if (!grade) {
+        return;
+    }
+
+
+    /*
+     * Evita duplicação se o card for
+     * incorporado diretamente ao HTML futuramente.
+     */
+
+    if (
+        document.getElementById(
+            "card-configurador-destino-svg"
+        )
+    ) {
+        return;
+    }
+
+
+    const card =
+        document.createElement(
+            "article"
+        );
+
+
+    card.id =
+        "card-configurador-destino-svg";
+
+
+    card.className =
+        "modelo-card";
+
+
+    card.dataset.categorias =
+        "ferramenta utilidade";
+
+
+    /*
+     * Ilustração SVG embutida.
+     *
+     * Assim não é necessário criar outro
+     * arquivo na pasta assets/img.
+     */
+
+    const imagemSvg = `
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 960 600"
+        >
+
+            <rect
+                width="960"
+                height="600"
+                fill="#f0ece8"
+            />
+
+
+            <!-- Pasta -->
+
+            <path
+                d="
+                    M165 215
+                    H365
+                    L415 270
+                    H795
+                    V430
+                    Q795 470 755 470
+                    H205
+                    Q165 470 165 430
+                    Z
+                "
+                fill="#FCC52D"
+                stroke="#531C33"
+                stroke-width="10"
+                stroke-linejoin="round"
+            />
+
+
+            <!-- Arquivo -->
+
+            <rect
+                x="315"
+                y="255"
+                width="250"
+                height="160"
+                rx="16"
+                fill="#ffffff"
+                stroke="#531C33"
+                stroke-width="8"
+            />
+
+
+            <!-- Símbolos SVG -->
+
+            <path
+                d="
+                    M357 305
+                    L320 335
+                    L357 365
+                "
+                fill="none"
+                stroke="#E17D01"
+                stroke-width="12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+
+
+            <path
+                d="
+                    M523 305
+                    L560 335
+                    L523 365
+                "
+                fill="none"
+                stroke="#E17D01"
+                stroke-width="12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+
+
+            <path
+                d="
+                    M445 295
+                    L420 375
+                "
+                fill="none"
+                stroke="#164ee8"
+                stroke-width="12"
+                stroke-linecap="round"
+            />
+
+
+            <text
+                x="440"
+                y="402"
+                text-anchor="middle"
+                font-family="Arial, Helvetica, sans-serif"
+                font-size="31"
+                font-weight="700"
+                fill="#531C33"
+            >
+                SVG
+            </text>
+
+
+            <!-- Engrenagem -->
+
+            <g
+                transform="translate(690 330)"
+            >
+
+                <circle
+                    cx="0"
+                    cy="0"
+                    r="74"
+                    fill="#8A880D"
+                    stroke="#531C33"
+                    stroke-width="8"
+                />
+
+
+                <circle
+                    cx="0"
+                    cy="0"
+                    r="27"
+                    fill="#ffffff"
+                    stroke="#531C33"
+                    stroke-width="8"
+                />
+
+
+                <g
+                    stroke="#531C33"
+                    stroke-width="16"
+                    stroke-linecap="round"
+                >
+
+                    <path d="M0 -98 V-74" />
+                    <path d="M0 74 V98" />
+
+                    <path d="M-98 0 H-74" />
+                    <path d="M74 0 H98" />
+
+                    <path d="M-69 -69 L-52 -52" />
+                    <path d="M52 52 L69 69" />
+
+                    <path d="M69 -69 L52 -52" />
+                    <path d="M-52 52 L-69 69" />
+
+                </g>
+
+            </g>
+
+
+            <text
+                x="480"
+                y="535"
+                text-anchor="middle"
+                font-family="Arial, Helvetica, sans-serif"
+                font-size="34"
+                font-weight="800"
+                letter-spacing="2"
+                fill="#531C33"
+            >
+                DESTINO SVG
+            </text>
+
+        </svg>
+    `;
+
+
+    const imagemDataUri =
+        "data:image/svg+xml;charset=UTF-8," +
+        encodeURIComponent(
+            imagemSvg
+        );
+
+
+    card.innerHTML = `
+
+        <div class="modelo-imagem">
+
+            <img
+                src="${imagemDataUri}"
+                alt="Configurador de destino dos arquivos SVG no Google Drive"
+            >
+
+            <span class="badge-card">
+                EQUIPE
+            </span>
+
+        </div>
+
+
+        <div class="modelo-conteudo">
+
+            <div class="modelo-meta">
+
+                <span>
+                    SVG
+                </span>
+
+                <span>
+                    Google Drive
+                </span>
+
+                <span>
+                    Equipe
+                </span>
+
+            </div>
+
+
+            <h3>
+                Configurar Destino dos SVGs
+            </h3>
+
+
+            <p>
+                Defina a pasta do Google Drive onde serão
+                armazenados os arquivos SVG enviados pelo
+                formulário. Acesso restrito à equipe autorizada.
+            </p>
+
+
+            <a
+                class="botao-modelo"
+                href="https://script.google.com/macros/s/AKfycbz6r1hDAxTd7z4eoDak4-V1wqHGeBW5j8R1NfQvs04DcHaZP6ZQcWcs7_oMU1X27X5a/exec"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Abrir configurador
+
+                <span aria-hidden="true">
+                    →
+                </span>
+            </a>
+
+        </div>
+
+    `;
+
+
+    /*
+     * Coloca o configurador junto das ferramentas,
+     * antes dos recursos externos do Cuttle.
+     */
+
+    const primeiroModeloExterno =
+        grade.querySelector(
+            '.modelo-card[data-categorias~="modelos"]'
+        );
+
+
+    if (
+        primeiroModeloExterno
+    ) {
+
+        grade.insertBefore(
+            card,
+            primeiroModeloExterno
+        );
+
+    }
+    else {
+
+        grade.appendChild(
+            card
+        );
+
+    }
+
+}
+
+
+
+// =====================================================
+// ADICIONA AS FERRAMENTAS DINÂMICAS
+// =====================================================
+
 adicionarCalibradorVs6040();
+
+adicionarConfiguradorDestinoSvg();
+
 
 
 // =====================================================
@@ -270,7 +608,9 @@ function filtrarModelos(
 
     semResultados.hidden =
         encontrados !== 0;
+
 }
+
 
 
 for (
@@ -290,6 +630,7 @@ for (
                 outro.classList.remove(
                     "ativo"
                 );
+
             }
 
 
@@ -301,9 +642,12 @@ for (
             filtrarModelos(
                 botao.dataset.filtro
             );
+
         }
     );
+
 }
+
 
 
 // =====================================================
@@ -334,9 +678,12 @@ for (
             alert(
                 "Este gerador ainda não teve sua URL do GitHub Pages configurada no catálogo."
             );
+
         }
     );
+
 }
+
 
 
 // =====================================================
